@@ -22,15 +22,14 @@ export default function Contact() {
 
     try {
    const res = await fetch("https://portfolio-backend-1-2e2c.onrender.com/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form)
-});
-
-
-
-
-      if (!res.ok) throw new Error("Request failed");
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(form)
+})
+  
+    if (!res.ok) throw new Error("Request failed");
 
       setStatus("success");
       setForm({ name: "", email: "", message: "" }); // clear form
