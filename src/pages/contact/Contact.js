@@ -21,11 +21,13 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-    const res = await fetch("https://portfolio-backend-ufar.onrender.com/api/contact", {
+   const res = await fetch("https://portfolio-backend-1-2e2c.onrender.com/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form),
+    body: JSON.stringify(form)
 });
+
+
 
 
       if (!res.ok) throw new Error("Request failed");
