@@ -1,0 +1,39 @@
+.home { padding: 96px 0 48px; }
+
+.home-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home-left { max-width: 640px; }
+
+.home-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.home-name {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.profile-wrap {
+  width: 320px;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 880px){
+  .home-grid { flex-direction: column-reverse; text-align: center; }
+  .profile-wrap { width: 220px; height: 220px; margin-bottom: 18px; }
+}

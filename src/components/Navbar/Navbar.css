@@ -1,0 +1,46 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  box-shadow: 0 4px 8px rgba(2, 6, 23, 0.25);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  color: var(--nav-text);
+  font-weight: 800;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-right a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 6px;
+  border-radius: 6px;
+}
+
+.nav-right a.active, 
+.nav-right a:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+@media (max-width: 780px) {
+  .nav-right { gap: 10px; font-size: 14px; }
+}

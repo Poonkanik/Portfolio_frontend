@@ -1,0 +1,54 @@
+/* entrance */
+.fadeUp { transform: translateY(18px); opacity:0; transition: all .6s cubic-bezier(.2,.9,.3,1); }
+.fadeUp.in { transform: translateY(0); opacity:1; }
+
+/* glow pulse */
+.glow {
+  box-shadow: 0 0 18px var(--primary-glow), inset 0 -6px 24px rgba(0,0,0,0.35);
+  transition: box-shadow .4s ease, transform .25s;
+}
+
+/* neon underline */
+.neon-underline {
+  position: relative;
+}
+.neon-underline::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-6px; height:4px;
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+  filter: blur(10px); opacity:0.75; transform: scaleX(0); transform-origin:left;
+  transition: transform .45s cubic-bezier(.2,.9,.3,1);
+}
+.neon-underline:hover::after { transform: scaleX(1); }
+
+/* floating slow */
+@keyframes floaty {
+  0%{ transform: translateY(0) rotate(-1deg); }
+  50%{ transform: translateY(-10px) rotate(1deg); }
+  100%{ transform: translateY(0) rotate(-1deg); }
+}
+.floaty { animation: floaty 6s ease-in-out infinite; }
+
+/* strong tilt when hover for high animation intensity */
+.tilt:hover{ transform: perspective(900px) rotateX(6deg) rotateY(-6deg) scale(1.02); transition: transform .28s; transform-origin:center; }
+
+/* reflection helper */
+.reflect{
+  position:relative;
+}
+.reflect::after{
+  content:"";
+  display:block;
+  height:40%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  transform: translateY(100%) scaleY(-1);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  opacity:0.75;
+  pointer-events:none;
+}
+
+/* responsive */
+@media (max-width:880px){
+  .row{ flex-direction:column; }
+  .container{ width:94%; }
+}
