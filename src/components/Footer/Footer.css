@@ -62,3 +62,10 @@
   .footer-grid { grid-template-columns: 1fr; text-align: center; }
   .footer-social, .footer-contact { justify-content: center; }
 }
+.footer-section:nth-child(2) {
+  text-align: center;
+}
+
+.footer-section:nth-child(2) .footer-link {
+  justify-content: center;
+}

@@ -59,7 +59,7 @@ export default function Footer(){
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Kani K • All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Poonkani K • All rights reserved.</p>
       </div>
     </motion.footer>
   );

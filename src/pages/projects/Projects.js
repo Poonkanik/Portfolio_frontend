@@ -1,34 +1,25 @@
-// src/pages/projects/Projects.jsx
 import React from "react";
 import "./Projects.css";
-import project1 from "../../image/p1.png";
 import project2 from "../../image/p2.png";
 import { motion } from "framer-motion";
 
 const projects = [
+ 
   {
     id: 1,
-    title: "Portfolio Website",
-    description: "Personal portfolio showcasing projects and resume.",
-    image: project1,
-    live: "/", // replace with your portfolio live link
-    code: "https://github.com/Poonkanik/Portfolio" // replace if exists
-  },
-  {
-    id: 2,
     title: "Employee Management",
     description: "CRUD app for managing employees, roles & departments.",
     image: project2,
-    live: "https://employee-management-system-7pkz.vercel.app",
+    live: "https://employee-management-system-vkke.vercel.app/",
     code: "https://github.com/Poonkanik/Employee_Management_Frontend"
   },
   {
-    id: 3,
+    id: 2,
     title: "CouponCart",
     description: "E-commerce coupon manager and storefront.",
     image: "/images/p3.jpg",
     live: "#",
-    code: "https://github.com/Poonkanik/CouponCart" // replace if exists
+    code: "https://github.com/Poonkanik/CouponCart" 
   }
 ];
 

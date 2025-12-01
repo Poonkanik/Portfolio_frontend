@@ -38,9 +38,9 @@ practical solutions that help users. I believe in continuous improvement and lov
         >
           <h3>Details</h3>
           <ul className="muted">
-  <li>Degree: B.E Computer Science Engineering</li>
-  <li>Skills: React, Spring Boot, PostgreSQL, REST APIs</li>
-  <li>Focus: Full Stack Development</li>
+  <li><b>Degree:</b> B.E Computer Science Engineering</li>
+  <li><b>Skills:</b> React, Spring Boot, PostgreSQL, REST APIs</li>
+  <li><b>Focus:</b> Full Stack Development</li>
 </ul>
         </motion.div>
 

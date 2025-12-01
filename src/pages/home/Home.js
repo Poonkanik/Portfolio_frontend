@@ -1,4 +1,3 @@
-// src/pages/home/Home.jsx
 import React from "react";
 import "./Home.css";
 import profile from "../../image/image2.png";
