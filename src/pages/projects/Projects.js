@@ -1,5 +1,6 @@
 import React from "react";
 import "./Projects.css";
+import project1 from "../../image/p1.png";
 import project2 from "../../image/p2.png";
 import { motion } from "framer-motion";
 
@@ -9,7 +10,7 @@ const projects = [
     id: 1,
     title: "Employee Management",
     description: "CRUD app for managing employees, roles & departments.",
-    image: project2,
+    image: project1,
     live: "https://employee-management-system-vkke.vercel.app/",
     code: "https://github.com/Poonkanik/Employee_Management_Frontend"
   },
@@ -17,9 +18,9 @@ const projects = [
     id: 2,
     title: "CouponCart",
     description: "E-commerce coupon manager and storefront.",
-    image: "/images/p3.jpg",
-    live: "#",
-    code: "https://github.com/Poonkanik/CouponCart" 
+    image:  project2,
+    live: "https://cloud-image-manager-frontend.vercel.app/",
+    code: "https://github.com/Poonkanik/Cloud-Image-Manager-Frontend" 
   }
 ];
 
