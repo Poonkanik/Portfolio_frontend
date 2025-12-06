@@ -16,8 +16,8 @@ const projects = [
   },
   {
     id: 2,
-    title: "CouponCart",
-    description: "E-commerce coupon manager and storefront.",
+    title: "Cloud Image Manager",
+    description: "A cloud-based image storage and management platform.",
     image:  project2,
     live: "https://cloud-image-manager-frontend.vercel.app/",
     code: "https://github.com/Poonkanik/Cloud-Image-Manager-Frontend" 
