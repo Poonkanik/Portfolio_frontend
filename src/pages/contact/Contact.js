@@ -1,9 +1,8 @@
-// src/pages/contact/Contact.jsx
 import React, { useState } from "react";
 import "./Contact.css";
+import { motion } from "framer-motion";
 
 export default function Contact() {
-
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState(null);
 
@@ -21,19 +20,19 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-   const res = await fetch("https://portfolio-backend-1-2e2c.onrender.com/api/contact", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(form)
-})
-  
-    if (!res.ok) throw new Error("Request failed");
+      const res = await fetch(
+        "https://portfolio-backend-1-2e2c.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form)
+        }
+      );
+
+      if (!res.ok) throw new Error("Request failed");
 
       setStatus("success");
-      setForm({ name: "", email: "", message: "" }); // clear form
-
+      setForm({ name: "", email: "", message: "" });
     } catch (error) {
       console.error(error);
       setStatus("error");
@@ -42,15 +41,19 @@ export default function Contact() {
 
   return (
     <section className="contact-section">
-      <div className="container contact-inner">
-
+      <motion.div
+        className="container contact-inner"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <h2>Contact</h2>
         <p className="muted">
           Have a project? Send a message and I'll get back to you.
         </p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-
           <input
             name="name"
             className="input"
@@ -108,10 +111,8 @@ export default function Contact() {
               Failed to send message. Try again.
             </p>
           )}
-
         </form>
-
-      </div>
+      </motion.div>
     </section>
   );
 }

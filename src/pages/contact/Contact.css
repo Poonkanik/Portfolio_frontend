@@ -1,5 +1,9 @@
-.contact-section { padding: 72px 0; }
+/* Contact Section */
+.contact-section {
+  padding: 72px 0;
+}
 
+/* Card */
 .contact-inner {
   background: #fff;
   padding: 24px;
@@ -9,6 +13,7 @@
   margin: auto;
 }
 
+/* Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -16,10 +21,43 @@
   margin-top: 12px;
 }
 
-.input, .textarea {
+/* Inputs */
+.input,
+.textarea {
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid rgba(12,18,40,0.06);
+  border: 1px solid rgba(12, 18, 40, 0.06);
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.textarea { min-height: 140px; resize: vertical; }
+/* Textarea */
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Focus State */
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Buttons (optional consistency) */
+.contact-form .btn {
+  min-width: 120px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 56px 0;
+  }
+
+  .contact-inner {
+    padding: 18px;
+  }
+}

@@ -23,7 +23,7 @@ export default function Home(){
 
 
           <div style={{ marginTop: 20 }}>
-            <a className="btn btn-primary" href="/resume.pdf" download>Download Resume</a>
+            <a className="btn btn-primary" href="kani_resume.pdf" download>Download Resume</a>
             <a className="btn btn-outline" href="/contact" style={{ marginLeft: 12 }}>Contact</a>
           </div>
         </motion.div>
